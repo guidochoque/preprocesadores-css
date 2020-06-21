@@ -1,0 +1,33 @@
+.encabezado--con-filtros {
+	text-align: center;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+	@include media(desktop-s) {
+		display: flex;
+	}
+	h2 {
+		margin-top: 10px;
+		font-size: 30px;
+		@include titulos($Fuente2);
+	}
+	.filtros {
+		width: 250px;
+		height: 60px;
+		padding: 20px;
+		margin: 0 auto;
+		@include media(desktop-s) {
+			margin: 0 0 0 auto;
+		}
+		@include caja;
+	}
+		span {
+			@include titulos($Fuente2);
+		}
+		a {
+			margin-left: 20px;
+			color: #ccc;
+			font-size: 20px;
+		}
+}

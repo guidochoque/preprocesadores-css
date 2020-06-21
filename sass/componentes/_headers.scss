@@ -1,0 +1,115 @@
+.header--principal {
+  display: flex;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #ebebeb;
+  input {
+    display: none;
+    @include media(desktop-s) {
+      display: initial;
+      height: 40px;
+      margin-top: 30px;
+      margin-left: 20px;
+      padding: 5px;
+    }
+  }
+}
+.nav--header {
+  position: fixed;
+  background: rgba(63, 64, 66, 0.9);
+  z-index: 1;
+  top: 0;
+  left: -50vw;
+  width: 50vw;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  @include media(desktop-s) {
+    position: initial;
+    background: initial;
+    z-index: initial;
+    top: initial;
+    right: initial;
+    width: initial;
+    bottom: initial;
+    display: initial;
+    align-items: initial;
+    justify-content: initial;
+    transition: initial;
+  }
+}
+.nav--header.is-active {
+  left: 0;
+}
+.nav--header ul {
+  display: block;
+  padding-top: 35px;
+  li {
+    list-style: none;
+    margin-right: 50px;
+    padding: 50px;
+    @include media(desktop-s) {
+      padding: 0px;
+    }
+  }
+  a {
+    color: $color-claro;
+    @include titulos($Fuente2);
+    @include font-size(30px);
+    @include media(desktop-s) {
+      @include font-size(16px);
+      color: $color-variacion;
+    }
+  }
+  @include media(desktop-s) {
+    display: flex;
+  }
+}
+.header__busqueda {
+  display: none;
+  margin-left: auto;
+  padding-top: 35px;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    font-size: 23px;
+    margin-right: 10px;
+    color: $color-secundario;
+  }
+  span {
+    color: $color-variacion;
+    @include titulos($Fuente2);
+  }
+  @include media(desktop-s) {
+    display: flex;
+  }
+}
+
+.header__menu {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(63,64,66,0.5);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  margin-left: auto;
+  padding: 12px;
+  &:hover {
+    text-decoration: none;
+  }
+  i {
+    font-size: 40px;
+    margin-right: 10px;
+    color: $color-secundario;
+  }
+  @include media(desktop-s) {
+    display: none;
+  }
+}

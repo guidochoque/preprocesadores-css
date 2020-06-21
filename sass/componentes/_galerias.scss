@@ -1,0 +1,94 @@
+.galeria {
+	width: 60%;
+	height: 450px;
+	margin: 10px auto;
+	padding: 30px;
+	justify-content: space-evenly;
+	border-radius: 20px;
+	background-color: $color-claro;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 50px 1fr 1fr 1fr 1fr;
+	grid-gap: 1px;
+	@include media (tablet) {
+		height: 850px;
+	}
+	@include media (desktop-s) {
+		height: 300px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 50px 1fr 1fr;
+	}
+	@include caja;
+	&__foto-principal {
+		grid-column: 1 / 3;
+		grid-row: 2 / 4;
+		@include media (desktop-s) {
+			grid-column: 1 / 3;
+			grid-row: 2 / 4;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__fotos-grid-perfil-1 {
+		grid-column: 1 / 3;
+		grid-row: 4 / 5;
+		@include media (desktop-s) {
+			grid-column: 3 / 5;
+			grid-row: 2 / 3;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__fotos-grid-perfil-2 {
+		grid-column: 1 / 2;
+		grid-row: 5 / 6;
+		@include media (desktop-s) {
+			grid-column: 3 / 4;
+			grid-row: 3 / 4;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__fotos-grid-perfil-3 {
+		grid-column: 2 / 3;
+		grid-row: 5 / 6;
+		@include media (desktop-s) {
+			grid-column: 4 / 5;
+			grid-row: 3 / 4;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+		}
+	}
+	h2 {
+		font-weight: 600;
+		font-size: 20px;
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+		@include media (desktop-s) {
+			grid-column: 1 / 5;
+			grid-row: 1 / 2;
+		}
+		// incluir aca
+		@include titulos($Fuente2);
+	}		
+	img {
+		border-radius: 10px;
+	}
+}
+
+
+	
